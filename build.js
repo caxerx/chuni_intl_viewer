@@ -28,6 +28,7 @@ const build = async () => {
   });
 
   await bundle.write({
+    sourcemap: true,
     file: path.join(__dirname, "main.min.js"),
     format: "iife",
   });

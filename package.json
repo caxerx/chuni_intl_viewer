@@ -16,7 +16,9 @@
     "url": "https://github.com/kyroslee/chuni_intl_viewer/issues"
   },
   "homepage": "https://github.com/kyroslee/chuni_intl_viewer#readme",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
     "@pyoner/svelte-types": "^3.4.4-2",
     "@rollup/plugin-commonjs": "^21.0.1",
@@ -24,6 +26,7 @@
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@rollup/plugin-typescript": "^8.3.0",
     "@tsconfig/svelte": "^2.0.1",
+    "@types/lodash": "^4.14.176",
     "rollup": "^2.42.3",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
