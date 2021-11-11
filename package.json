@@ -1,6 +1,6 @@
 {
   "name": "chuni_intl_viewer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A bookmarklet tool to let you view the records of [CHUNITHM-NET (International)](https://chunithm-net-eng.com/) in rating order.",
   "main": "main.js",
   "scripts": {
