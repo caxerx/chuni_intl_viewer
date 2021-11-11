@@ -58,7 +58,6 @@ export async function fetchRecordFast() {
           ),
           difficulty: difficulties[diffIndex],
         };
-        console.log(diffIndex, data);
         return data;
       })
       .filter((s) => s.title != null && s.score >= 0)

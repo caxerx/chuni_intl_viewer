@@ -17,11 +17,13 @@ const main = async () => {
     return;
   }
 
-  const mainBody = document.createElement("div");
-  document.body?.prepend(mainBody);
+  // const mainBody = document.createElement("div");
+  const mainBody = document.body;
+  const shadow = mainBody.attachShadow({ mode: "open" });
+  // document.body?.prepend(mainBody);
 
   new Svelte({
-    target: mainBody,
+    target: shadow,
   });
 };
 

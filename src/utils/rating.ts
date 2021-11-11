@@ -1,4 +1,4 @@
-export function calculateRank(score: number, songRating: number) {
+export function calculateRating(score: number, songRating: number) {
   let offset = 0;
   if (score >= 1007500) {
     offset = 2;
@@ -19,7 +19,7 @@ export function calculateRank(score: number, songRating: number) {
   return Math.floor((songRating + offset) * 100) / 100;
 }
 
-export function calculateRankNew(score: number, songRating: number) {
+export function calculateRatingNew(score: number, songRating: number) {
   let offset = 0;
   if (score >= 1009000) {
     offset = 2.15;
@@ -40,4 +40,19 @@ export function calculateRankNew(score: number, songRating: number) {
   }
 
   return Math.floor((songRating + offset) * 100) / 100;
+}
+
+export function calculateBest30(ratingList: number[]) {
+  return (
+    ratingList
+      .sort((a, b) => b - a)
+      .slice(0, 30)
+      .reduce((acc, val) => acc + val, 0) / 30
+  );
+}
+
+export function calculateMaxAchievable(ratingList: number[]) {
+  let maxRating = ratingList.reduce((acc, val) => (val > acc ? val : acc), 0);
+  let best30Avg = calculateBest30(ratingList);
+  return (best30Avg * 30 + maxRating * 10) / 40;
 }

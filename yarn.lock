@@ -23,6 +23,11 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@iconify/json@1.1.421":
+  version "1.1.421"
+  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-1.1.421.tgz#15fd91661f7d6505981ee7f0f33d57667c9a410a"
+  integrity sha512-nCxWszt2AjVsG/REoAhFue4aiJniZmjx8M2MAS/SCSHQUGoxKcFTg5NeyfDW1tQiKJ0R8AmbEb0Zum8ljybZNA==
+
 "@pyoner/svelte-types@^3.4.4-2":
   version "3.4.4-2"
   resolved "https://registry.yarnpkg.com/@pyoner/svelte-types/-/svelte-types-3.4.4-2.tgz#0bc64255d56e82a5e7f3d0b31b324551a77da6b0"
@@ -532,6 +537,15 @@ svelte-preprocess@^4.9.8:
     sorcery "^0.10.0"
     strip-indent "^3.0.0"
 
+svelte-windicss-preprocess@^4.1.6:
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/svelte-windicss-preprocess/-/svelte-windicss-preprocess-4.1.6.tgz#6e4af9dc7812f09a5e6348403e1030ff80654e31"
+  integrity sha512-ntDQJSVDu0KvIhgiATonC1HM3ANDU+rilhHyDIBQTMaKbqNBk6hvBLF5eEnwsw2S9xf3vfRL2Hls7QkaUa/FjA==
+  dependencies:
+    "@iconify/json" "1.1.421"
+    windicss "3.2.1"
+    windicss-runtime-dom "3.0.0"
+
 svelte@^3.44.1:
   version "3.44.1"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.44.1.tgz#5cc772a8340f4519a4ecd1ac1a842325466b1a63"
@@ -560,6 +574,16 @@ typescript@^4.4.4:
   version "4.4.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.4.tgz#2cd01a1a1f160704d3101fd5a58ff0f9fcb8030c"
   integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
+
+windicss-runtime-dom@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/windicss-runtime-dom/-/windicss-runtime-dom-3.0.0.tgz#1b7d4d7e07099a6f38b681adeb272992e57858d5"
+  integrity sha512-a12Uhu71yT1U8w0PzJ3amF9xmC8b1rWFLgXEfI/UyuwUi6D1vUACOO6vb0iY4T4OtP/bJAjQMM7lv3hMWSwLuQ==
+
+windicss@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/windicss/-/windicss-3.2.1.tgz#bd0f7b9ebabba04ea8dfedcbb0263c2ef9591db4"
+  integrity sha512-LusrIrryBFHAPQ/OOTbS4EWWuzI6eGeJglI9nQ3kDBr1cqH69NWt8Z8q59f9kTkgptXroejmWfksWwqgHs8EVw==
 
 wrappy@1:
   version "1.0.2"

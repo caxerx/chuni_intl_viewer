@@ -7,6 +7,7 @@ const commonjs = require("@rollup/plugin-commonjs");
 const typescript = require("@rollup/plugin-typescript");
 const svelte = require("rollup-plugin-svelte");
 const sveltePreprocessor = require("svelte-preprocess");
+const windi = require("svelte-windicss-preprocess").windi;
 
 console.log("Compiling...");
 
@@ -20,7 +21,7 @@ const build = async () => {
       json(),
       commonjs(),
       svelte({
-        preprocess: sveltePreprocessor(),
+        preprocess: [sveltePreprocessor(), windi()],
         extensions: [".svelte"],
         emitCss: false,
       }),

@@ -1,5 +1,7 @@
 export async function getIntlData() {
-  const data = await import("../../chunirec.json");
+  const data = await fetch(
+    "https://cdn.jsdelivr.net/gh/caxerx/chuni_intl_viewer/chunirec.json"
+  ).then((d) => d.json());
   return data;
 }
 
