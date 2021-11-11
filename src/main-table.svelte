@@ -44,20 +44,20 @@
   <tbody class="bg-white divide-y divide-gray-200">
     {#each songData as song, i}
       <tr>
-        <td class="px-2 py-2  text-sm text-gray-900">{i + 1}</td>
-        <td class="px-2 py-2 text-sm text-gray-900" style="max-width: 20%">
+        <td class="px-2 py-1 text-sm text-gray-900">{i + 1}</td>
+        <td class="px-2 py-1 text-sm text-gray-900" style="max-width: 40%">
           {song.title}
         </td>
-        <td class="px-2 py-2  text-sm text-gray-900">
+        <td class="px-2 py-1 text-sm text-gray-900">
           {song.difficulty}
         </td>
-        <td class="px-2 py-2  text-sm text-gray-900">
+        <td class="px-2 py-1 text-sm text-gray-900">
           {song.const.toFixed(1)}
         </td>
-        <td class="px-2 py-2  text-sm text-gray-900">
+        <td class="px-2 py-1 text-sm text-gray-900">
           {song.score}
         </td>
-        <td class="px-2 py-2  text-sm text-gray-900">
+        <td class="px-2 py-1 text-sm text-gray-900">
           {song.rating.toFixed(2)}
         </td>
       </tr>
