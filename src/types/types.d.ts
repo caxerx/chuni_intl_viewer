@@ -1,12 +1,29 @@
+type ChunirecDifficulty = "BAS" | "ADV" | "EXP" | "MAS" | "ULT";
+
 interface SongData {
   title: string;
-  score: number;
-  difficulty: "MAS" | "EXP" | "ADV" | "BAS";
-  const: number;
-  rating: number;
+  score: BigNumber;
+  difficulty: ChunirecDifficulty;
+  const: BigNumber;
+  rating: BigNumber;
 }
 
 interface PersonalRating {
-  best30Avg: number;
-  maxAchievable: number;
+  best30Avg: BigNumber;
+  maxAchievable: BigNumber;
+}
+
+interface ChunirecMeta {
+  title: string;
+}
+
+interface ChunirecDataRecord {
+  const: number;
+}
+
+type ChunirecData = Record<ChunirecDifficulty, ChunirecDataRecord>;
+
+interface ChunirecRecord {
+  meta: ChunirecMeta;
+  data: ChunirecData;
 }

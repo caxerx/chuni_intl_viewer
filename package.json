@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kyroslee/chuni_intl_viewer#readme",
   "dependencies": {
+    "bignumber.js": "^9.0.1",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
