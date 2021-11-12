@@ -1,3 +1,5 @@
+import BigNumber from "bignumber.js";
+
 export function getCookie(key: string) {
   const cookieEntry = document.cookie
     .split(";")
@@ -7,7 +9,7 @@ export function getCookie(key: string) {
   return cookieEntry ? cookieEntry[1] : "";
 }
 
-export function strToNum(str: string | null | undefined) {
-  if (!str) return -1;
-  return Number([...str].filter((e) => e !== ",").join(""));
+export function parseFormattedNumber(str?: string) {
+  if (!str) return new BigNumber(-1);
+  return new BigNumber(+[...str].filter((e) => e !== ",").join(""));
 }

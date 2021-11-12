@@ -1,11 +1,12 @@
-import { getCookie, strToNum } from "./utils";
+import { getCookie, parseFormattedNumber } from "./utils";
 
 const Difficulty = {
   master: "MAS",
   expert: "EXP",
   advanced: "ADV",
   basic: "BAS",
-} as const;
+  ultima: "ULT",
+} as Record<string, ChunirecDifficulty>;
 
 export async function getSongList(
   difficulty: typeof Difficulty[keyof typeof Difficulty] = Difficulty.master
@@ -14,6 +15,7 @@ export async function getSongList(
   fd.append("genre", "99");
   fd.append("token", getCookie("_t"));
   const api = {
+    // [Difficulty.ultima]: "sendUltima",
     [Difficulty.master]: "sendMaster",
     [Difficulty.expert]: "sendExpert",
     [Difficulty.advanced]: "sendAdvanced",
@@ -53,13 +55,13 @@ export async function fetchRecordFast() {
       .map((s) => {
         const data = {
           title: (s.querySelector(".music_title") as HTMLDivElement)?.innerText,
-          score: strToNum(
+          score: parseFormattedNumber(
             (s.querySelector(".text_b") as HTMLSpanElement)?.innerText
           ),
           difficulty: difficulties[diffIndex],
         };
         return data;
       })
-      .filter((s) => s.title != null && s.score >= 0)
+      .filter((s) => s.title != null && s.score.isGreaterThanOrEqualTo(0))
   );
 }

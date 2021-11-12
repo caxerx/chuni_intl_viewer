@@ -1,4 +1,5 @@
 <script lang="ts">
+  import BigNumber from "bignumber.js";
   import MainTable from "./main-table.svelte";
   import { fetchRecordFast } from "./utils/chunithm-net-fetch";
   import { getChunirecData, getIntlData } from "./utils/music-data";
@@ -18,7 +19,7 @@
     isLoading = true;
     const data = await fetchRecordFast();
 
-    let songConstList = [] as any[];
+    let songConstList = [] as ChunirecRecord[];
     if (intlConst) {
       songConstList = await getIntlData();
     } else {
@@ -30,17 +31,19 @@
         const songConst = songConstList.find(
           (c) => c.meta.title === song.title
         );
-        const cons = songConst?.data[song.difficulty]?.const ?? 0;
+
+        const cons = songConst?.data?.[song.difficulty]?.const ?? 0;
+
         return {
           ...song,
           const: cons,
           rating: (intlConst ? calculateRating : calculateRatingNew)(
             song.score,
-            cons
+            new BigNumber(cons)
           ),
         };
       })
-      .sort((s1, s2) => s2.rating - s1.rating);
+      .sort((s1, s2) => s2.rating.minus(s1.rating).toNumber());
 
     const ratingList = songData.map((s) => s.rating);
     userRating = {
