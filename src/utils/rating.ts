@@ -16,7 +16,7 @@ export function calculateRating(score: number, songRating: number) {
     offset = -5 + ((score - 900000) * 4) / 50000;
   }
 
-  return Math.floor((songRating + offset) * 100) / 100;
+  return +(Math.floor((songRating + offset) * 100) / 100).toFixed(2);
 }
 
 export function calculateRatingNew(score: number, songRating: number) {

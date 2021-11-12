@@ -83,9 +83,19 @@
                 Select Version
               </h3>
               <div class="mt-2">
-                <p class="text-sm text-gray-500">
+                <p class="text-sm text-gray-500 mb-2">
                   Select the Chunithm version you want to use for rating
                   calculation.
+                </p>
+                <p class="text-xs text-gray-500">
+                  This is a fork of <a
+                    class="text-blue-600"
+                    target="_blank"
+                    href="https://github.com/kyroslee/chuni_intl_viewer"
+                  >
+                    kyroslee/chuni_intl_viewer
+                  </a>. If you prefer the user interface of original version,
+                  please revert to the old script.
                 </p>
               </div>
             </div>
