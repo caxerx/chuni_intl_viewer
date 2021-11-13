@@ -1,3 +1,5 @@
+import type BigNumber from "bignumber.js";
+
 type ChunirecDifficulty = "BAS" | "ADV" | "EXP" | "MAS" | "ULT";
 
 interface SongData {
