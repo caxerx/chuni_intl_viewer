@@ -2,7 +2,6 @@ const path = require("path");
 const { rollup } = require("rollup");
 const nodeResolve = require("@rollup/plugin-node-resolve").default;
 const { terser } = require("rollup-plugin-terser");
-const json = require("@rollup/plugin-json");
 const commonjs = require("@rollup/plugin-commonjs");
 const typescript = require("@rollup/plugin-typescript");
 const svelte = require("rollup-plugin-svelte");
@@ -18,7 +17,6 @@ const build = async () => {
       typescript(),
       nodeResolve(),
       terser(),
-      json(),
       commonjs(),
       svelte({
         preprocess: [sveltePreprocessor(), windi()],

@@ -4,10 +4,6 @@ import { calculateRating, calculateRatingNew } from "./utils/rating";
 
 import { getCookie } from "./utils/utils";
 
-window.BigNumber = BigNumber;
-window.calculateRating = calculateRating;
-window.calculateRatingNew = calculateRatingNew;
-
 const main = async () => {
   if (window.location.hostname !== "chunithm-net-eng.com") {
     alert(
