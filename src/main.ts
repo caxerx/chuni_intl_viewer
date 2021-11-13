@@ -1,6 +1,4 @@
-import BigNumber from "bignumber.js";
 import Svelte from "./main.svelte";
-import { calculateRating, calculateRatingNew } from "./utils/rating";
 
 import { getCookie } from "./utils/utils";
 
