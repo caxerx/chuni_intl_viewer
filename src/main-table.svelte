@@ -1,32 +1,31 @@
 <script lang="ts">
-  import BigNumber from "bignumber.js";
   import OverviewTable from "./overview-table.svelte";
+  import type { PersonalRating, SongData } from "./types/types";
 
   export let songData: SongData[];
   export let userRating: PersonalRating;
 
   const title = ["#", "Song Name", "Difficulty", "Constant", "Score", "Rating"];
+
   // const titleSlowFetch = ["Last Play", "Play Count"];
 
-  $: {
-    if (songData.length === 0) {
-      for (let i = 0; i < 600; i++) {
-        songData.push({
-          title: "DUMMY SONG",
-          score: new BigNumber(1010000),
-          difficulty: "ULT",
-          const: new BigNumber(16.0),
-          rating: new BigNumber(18.15),
-        });
-      }
-    }
-  }
+  // $: {
+  //   if (songData.length === 0) {
+  //     for (let i = 0; i < 600; i++) {
+  //       songData.push({
+  //         title: "DUMMY SONG",
+  //         score: new BigNumber(1010000),
+  //         difficulty: "ULT",
+  //         const: new BigNumber(16.0),
+  //         rating: new BigNumber(18.15),
+  //       });
+  //     }
+  //   }
+  // }
 </script>
 
 <OverviewTable {userRating} />
-<table
-  class="max-w-max divide-y divide-gray-200 dark:divide-gray-700"
->
+<table class="max-w-max divide-y divide-gray-200 dark:divide-gray-700">
   <thead class="bg-gray-200 dark:bg-gray-800">
     <tr>
       {#each title as head}

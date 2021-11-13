@@ -2,6 +2,7 @@
   import BigNumber from "bignumber.js";
   import DarkModeButton from "./dark-mode-button.svelte";
   import MainTable from "./main-table.svelte";
+  import type { ChunirecRecord, PersonalRating, SongData } from "./types/types";
   import { fetchRecordFast } from "./utils/chunithm-net-fetch";
   import { getChunirecData, getIntlData } from "./utils/music-data";
   import {
@@ -14,7 +15,10 @@
   let isLoading: boolean | null = null;
 
   let songData = [] as SongData[];
-  let userRating = { best30Avg: 0, maxAchievable: 0 } as PersonalRating;
+  let userRating = {
+    best30Avg: new BigNumber(0),
+    maxAchievable: new BigNumber(0),
+  } as PersonalRating;
 
   async function setFetchMode(intlConst: boolean) {
     isLoading = true;
@@ -37,7 +41,7 @@
 
         return {
           ...song,
-          const: cons,
+          const: new BigNumber(cons),
           rating: (intlConst ? calculateRating : calculateRatingNew)(
             song.score,
             new BigNumber(cons)
@@ -63,9 +67,7 @@
 </script>
 
 <body class={`min-w-max${darkMode ? " dark" : ""}`}>
-  <div
-    class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50"
-  >
+  <div class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
     <div class="absolute right-8 top-8 z-20">
       <DarkModeButton {darkMode} on:click={() => toggleDarkMode()} />
     </div>

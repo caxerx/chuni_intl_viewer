@@ -1,6 +1,7 @@
 <script lang="ts">
   import DarkModeButton from "./dark-mode-button.svelte";
   import OverviewTableItem from "./overview-table-item.svelte";
+  import type { PersonalRating } from "./types/types";
 
   let date = new Date().toLocaleDateString();
   export let userRating: PersonalRating;

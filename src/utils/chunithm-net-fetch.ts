@@ -1,3 +1,4 @@
+import type { ChunirecDifficulty } from "src/types/types";
 import { getCookie, parseFormattedNumber } from "./utils";
 
 const Difficulty = {
