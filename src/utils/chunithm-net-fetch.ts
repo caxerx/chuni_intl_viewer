@@ -47,9 +47,10 @@ export async function getSongList(
 export async function fetchRecordFast() {
   const difficulties = Object.values(Difficulty);
 
-  const rawSongList = await Promise.all(
-    difficulties.map((d) => getSongList(d))
-  );
+  const rawSongList = [];
+  for (const diff of difficulties) {
+    rawSongList.push(await getSongList(diff));
+  }
 
   return rawSongList.flatMap((d, diffIndex) =>
     d
