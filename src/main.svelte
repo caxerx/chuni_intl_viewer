@@ -12,6 +12,8 @@
     calculateRatingNew,
   } from "./utils/rating";
 
+  export let styles: string = "";
+
   let isLoading: boolean | null = null;
 
   let songData = [] as SongData[];
@@ -65,6 +67,10 @@
     darkMode = !darkMode;
   }
 </script>
+
+<head>
+  {@html styles}
+</head>
 
 <body class={`relative min-w-max${darkMode ? " dark" : ""}`}>
   <div class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
@@ -144,9 +150,3 @@
     {/if}
   </div>
 </body>
-
-<style lang="postcss" global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-</style>
