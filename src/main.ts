@@ -29,8 +29,7 @@ const main = async () => {
     target: shadow,
   });
 
-  window.styleInject = (style: string) => {
-    console.log(style);
+  (window as any).styleInject = (style: string) => {
     svelte.$set({
       styles: `<style>${style}</style>`,
     });

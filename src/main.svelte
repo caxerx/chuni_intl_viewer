@@ -72,7 +72,7 @@
   {@html styles}
 </head>
 
-<body class={`relative min-w-max${darkMode ? " dark" : ""}`}>
+<body class={`relative min-w-max ${darkMode ? "dark" : ""}`}>
   <div class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
     <div class="absolute right-8 top-8 z-20">
       <DarkModeButton {darkMode} on:click={() => toggleDarkMode()} />
