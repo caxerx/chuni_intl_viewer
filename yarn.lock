@@ -56,11 +56,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@pyoner/svelte-types@^3.4.4-2":
-  version "3.4.4-2"
-  resolved "https://registry.yarnpkg.com/@pyoner/svelte-types/-/svelte-types-3.4.4-2.tgz#0bc64255d56e82a5e7f3d0b31b324551a77da6b0"
-  integrity sha512-5oQsFCU9pxu1mdA72e2XOqVmheSQfpaQnsmvO4FTEd6D3k3Wx3Nr4s2m0gfqjGLHoGGEo9FOK4xQXXX7D5Uz6A==
-
 "@rollup/plugin-commonjs@^21.0.1":
   version "21.0.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-21.0.1.tgz#1e57c81ae1518e4df0954d681c642e7d94588fee"
@@ -653,6 +648,11 @@ html-tags@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-3.1.0.tgz#7b5e6f7e665e9fb41f30007ed9e0d41e97fb2140"
   integrity sha512-1qYz89hW3lFDEazhjW0yVAV87lw8lVkrJocr72XmBkMKsoSVJCQx3W8BXsC7hO2qAt8BoVjYjtAcZ9perqGnNg==
+
+html-to-image@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/html-to-image/-/html-to-image-1.9.0.tgz#cb49bf9f4b37376771c85cfdd65863ae9420b268"
+  integrity sha512-9gaDCIYg62Ek07F2pBk76AHgYZ2gxq2YALU7rK3gNCqXuhu6cWzsOQqM7qGbjZiOzxGzrU1deDqZpAod2NEwbA==
 
 import-cwd@^3.0.0:
   version "3.0.0"
