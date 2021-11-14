@@ -1,3 +1,5 @@
+import "virtual:windi.css";
+
 import Svelte from "./main.svelte";
 
 import { getCookie } from "./utils/utils";
@@ -20,11 +22,19 @@ const main = async () => {
   // const mainBody = document.createElement("div");
   const mainBody = document.body;
   const shadow = mainBody.attachShadow({ mode: "open" });
+
   // document.body?.prepend(mainBody);
 
-  new Svelte({
+  const svelte = new Svelte({
     target: shadow,
   });
+
+  window.styleInject = (style: string) => {
+    console.log(style);
+    svelte.$set({
+      styles: `<style>${style}</style>`,
+    });
+  };
 };
 
 main();
